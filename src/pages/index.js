@@ -10,6 +10,7 @@ import Footer from '../../components/common/Footer'
 export default function Home() {
   return (
     <div>
+      testing
       <Navbar />
       <Hero />
       <Video id="video" />
