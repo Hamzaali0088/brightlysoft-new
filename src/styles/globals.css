@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --primary: #ffffff;
-  --secondary: #171717;
+  --primary: #FD1146;
+  --secondary: #03002C;
 }
 
 @theme inline {
-  --primary: var(--primary);
-  --secondary: var(--secondary);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary: #0a0a0a;
-    --secondary: #ededed;
+    --color-primary: var(--primary);
+    --color-secondary: var(--secondary);
   }
 }
 

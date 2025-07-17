@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-const Video = () => {
+const Video = ({id}) => {
     const [isAtTop, setIsAtTop] = useState(false)
 
     useEffect(() => {
@@ -41,7 +41,7 @@ const Video = () => {
     }, [])
 
     return (
-        <div className={`video-container mt-12 md:mt-32 lg:mt-48 transition-all duration-500 ease-in-out flex items-center justify-center mx-auto h-[150vh] relative overflow-hidden ${
+        <div id={id} className={`video-container mt-12 md:mt-14 lg:mt-16 transition-all duration-500 ease-in-out flex items-center justify-center mx-auto h-[150vh] relative overflow-hidden ${
             isAtTop ? 'w-full' : 'w-[80%]'
         }`}>
             <video 
