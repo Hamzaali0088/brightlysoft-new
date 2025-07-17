@@ -5,9 +5,9 @@ import FullContainer from '../../common/FullContainer'
 
 const About = () => {
   return (
-    <FullContainer className='py-12 bg-secondary'>
+    <FullContainer className='bg-secondary'>
 
-      <Container className="min-h-screen bg-gradient-to-br from-secondary to-secondary/90 py-20 px-4">
+      <Container className="min-h-screen bg-gradient-to-br from-secondary to-secondary/90 py-12 px-4">
           {/* Header */}
           <div className="text-start mb-16">
             <Heading title="About Brighty Soft" className="text-white mb-6" />

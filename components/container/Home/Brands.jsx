@@ -1,3 +1,4 @@
+'use client'
 import React, { useEffect, useRef } from 'react'
 import FullContainer from '../../common/FullContainer'
 import Container from '../../common/Container'
@@ -5,51 +6,99 @@ import Image from 'next/image'
 import Heading from '../../common/Heading'
 
 export default function Brands() {
-    const brands = [
+    const brandsSlider1 = [
         {
-            name: 'Brand 1',
-            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.',
-            image: '/st-images/sitebuilderz.png'
+            name: 'TechCorp',
+            description: 'Leading technology solutions for modern businesses with innovative digital transformation.',
+            image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop'
         },
         {
-            name: 'Brand 2',
-            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.',
-            image: '/st-images/sitebuilderz.png'
+            name: 'InnovateLab',
+            description: 'Cutting-edge research and development company specializing in breakthrough technologies.',
+            image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=600&fit=crop'
         },
         {
-            name: 'Brand 3',
-            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.',
-            image: '/st-images/sitebuilderz.png'
+            name: 'DigitalFlow',
+            description: 'Streamlined digital solutions that optimize your business processes and boost productivity.',
+            image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop'
         },
         {
-            name: 'Brand 2',
-            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.',
-            image: '/st-images/sitebuilderz.png'
+            name: 'CloudSync',
+            description: 'Advanced cloud computing services for seamless data management and collaboration.',
+            image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop'
         },
         {
-            name: 'Brand 3',
-            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.',
-            image: '/st-images/sitebuilderz.png'
+            name: 'SmartGrid',
+            description: 'Intelligent infrastructure solutions for sustainable energy and smart city development.',
+            image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&h=600&fit=crop'
         },
         {
-            name: 'Brand 2',
-            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.',
-            image: '/st-images/sitebuilderz.png'
+            name: 'DataVault',
+            description: 'Secure data storage and analytics platform for enterprise-level information management.',
+            image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop'
         },
         {
-            name: 'Brand 3',
-            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.',
-            image: '/st-images/sitebuilderz.png'
+            name: 'CyberShield',
+            description: 'Comprehensive cybersecurity solutions protecting your digital assets from modern threats.',
+            image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop'
         },
         {
-            name: 'Brand 2',
-            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.',
-            image: '/st-images/sitebuilderz.png'
+            name: 'QuantumLeap',
+            description: 'Next-generation quantum computing research and development for future technologies.',
+            image: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=600&fit=crop'
         },
         {
-            name: 'Brand 3',
-            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.',
-            image: '/st-images/sitebuilderz.png'
+            name: 'BioTech',
+            description: 'Revolutionary biotechnology solutions advancing healthcare and life sciences.',
+            image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&h=600&fit=crop'
+        },
+    ]
+
+    const brandsSlider2 = [
+        {
+            name: 'GreenEnergy',
+            description: 'Sustainable renewable energy solutions for a cleaner, greener future.',
+            image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&h=600&fit=crop'
+        },
+        {
+            name: 'FinTech Pro',
+            description: 'Innovative financial technology solutions revolutionizing digital banking and payments.',
+            image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop'
+        },
+        {
+            name: 'AI Solutions',
+            description: 'Artificial intelligence and machine learning platforms for intelligent automation.',
+            image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop'
+        },
+        {
+            name: 'MobileFirst',
+            description: 'Mobile-first development company creating exceptional user experiences across devices.',
+            image: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=600&fit=crop'
+        },
+        {
+            name: 'HealthTech',
+            description: 'Digital health solutions improving patient care and medical outcomes worldwide.',
+            image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&h=600&fit=crop'
+        },
+        {
+            name: 'EduTech',
+            description: 'Educational technology platforms transforming learning experiences for students globally.',
+            image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop'
+        },
+        {
+            name: 'LogiChain',
+            description: 'Supply chain optimization and logistics management for efficient business operations.',
+            image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=600&fit=crop'
+        },
+        {
+            name: 'RetailTech',
+            description: 'Next-generation retail technology solutions for modern shopping experiences.',
+            image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop'
+        },
+        {
+            name: 'AutoDrive',
+            description: 'Autonomous vehicle technology and smart transportation solutions for the future.',
+            image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop'
         },
     ]
     const sliderRef = useRef(null);
@@ -171,8 +220,8 @@ export default function Brands() {
                         msOverflowStyle: 'none',       // IE and Edge
                     }}>
                         {
-                            brands.map((brand, index) => (
-                                <div key={index} className='flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 flex flex-col items-center group justify-center border min-h-48 lg:min-h-64 xl:min-h-80 border-primary/20 rounded-lg overflow-hidden p-4 relative bg-white shadow-lg hover:shadow-xl transition-all duration-300'>
+                            brandsSlider1.map((brand, index) => (
+                                <div key={index} className='flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 flex flex-col items-center group justify-center border min-h-36 lg:min-h-48 xl:min-h-64 border-primary/20 rounded-lg overflow-hidden p-4 relative bg-white shadow-lg hover:shadow-xl transition-all duration-300'>
                                     <Image src={brand.image} alt={brand.name} width={1000} height={1000} className='w-full h-full object-cover absolute top-0 left-0 group-hover:scale-110 transition-all duration-700' />
                                     <div className='absolute top-0 left-0 w-full h-full bg-secondary/80 z-10' />
                                     <div className='relative z-10 text-white h-full w-full flex items-center justify-center transition-all duration-700'>
@@ -191,8 +240,8 @@ export default function Brands() {
                         msOverflowStyle: 'none',       // IE and Edge
                     }}>
                         {
-                            brands.map((brand, index) => (
-                                <div key={index} className='flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 flex flex-col items-center group justify-center border min-h-48 lg:min-h-64 xl:min-h-80 border-primary/20 rounded-lg overflow-hidden p-4 relative bg-white shadow-lg hover:shadow-xl transition-all duration-300'>
+                            brandsSlider2.map((brand, index) => (
+                                <div key={index} className='flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 flex flex-col items-center group justify-center border min-h-36 lg:min-h-48 xl:min-h-64 border-primary/20 rounded-lg overflow-hidden p-4 relative bg-white shadow-lg hover:shadow-xl transition-all duration-300'>
                                     <Image src={brand.image} alt={brand.name} width={1000} height={1000} className='w-full h-full object-cover absolute top-0 left-0 group-hover:scale-110 transition-all duration-700' />
                                     <div className='absolute top-0 left-0 w-full h-full bg-secondary/80 z-10' />
                                     <div className='relative z-10 text-white h-full w-full flex items-center justify-center transition-all duration-700'>
