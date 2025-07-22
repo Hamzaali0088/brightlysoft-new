@@ -14,7 +14,7 @@
         <Container className="md:hidden">
             <MobileNavbar />
         </Container>
-        <Container className=" px-2 sm:px-6 lg:px-8 hidden md:block">
+        <Container className=" hidden md:block">
             <div className="flex items-center justify-between h-20">
             <div className="flex items-center">
                 <Link href="/" className="inline-block">

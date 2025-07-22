@@ -4,109 +4,95 @@ import FullContainer from '../../common/FullContainer'
 import Container from '../../common/Container'
 import Image from 'next/image'
 import Heading from '../../common/Heading'
+import Link from 'next/link'
 
 export default function Brands() {
     const brandsSlider1 = [
         {
-            name: 'TechCorp',
-            description: 'Leading technology solutions for modern businesses with innovative digital transformation.',
-            image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop'
+            name: 'Fashion',
+            image: '/st-images/brands/fashion.png',
+            href: 'https://fashion.amplifytest1.top'
         },
         {
-            name: 'InnovateLab',
-            description: 'Cutting-edge research and development company specializing in breakthrough technologies.',
-            image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=600&fit=crop'
+            name: 'Magzine',
+            image: '/st-images/brands/magzine.png',
+            href: 'https://magzine.amplifytest1.top'
         },
         {
-            name: 'DigitalFlow',
-            description: 'Streamlined digital solutions that optimize your business processes and boost productivity.',
-            image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop'
+            name: 'BizzBlog',
+            image: '/st-images/brands/bizzblog.png',
+            href: 'https://bizzblog.amplifytest1.top'
         },
         {
-            name: 'CloudSync',
-            description: 'Advanced cloud computing services for seamless data management and collaboration.',
-            image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop'
+            name: 'Koga',
+            image: '/st-images/brands/koga.png',
+            href: 'https://koga.amplifytest1.top'
         },
         {
-            name: 'SmartGrid',
-            description: 'Intelligent infrastructure solutions for sustainable energy and smart city development.',
-            image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&h=600&fit=crop'
+            name: 'Isabelle Roche',
+            image: '/st-images/brands/isabelleroche.png',
+            href: 'https://isabelle-roche.amplifytest1.top/'
         },
         {
-            name: 'DataVault',
-            description: 'Secure data storage and analytics platform for enterprise-level information management.',
-            image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop'
+            name: 'Newspaper Pro',
+            image: '/st-images/brands/newspaperpro.png',
+            href: 'https://newspaperpro.amplifytest1.top'
         },
         {
-            name: 'CyberShield',
-            description: 'Comprehensive cybersecurity solutions protecting your digital assets from modern threats.',
-            image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop'
+            name: 'Local sanjose',
+            image: '/st-images/brands/local.png',
+            href: 'https://local-sanjose.amplifytest1.top'
         },
         {
-            name: 'QuantumLeap',
-            description: 'Next-generation quantum computing research and development for future technologies.',
-            image: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=600&fit=crop'
+            name: 'Local HVC',
+            image: '/st-images/brands/hvc.png',
+            href: 'https://httpsgithubcomavico-globalservice-next15-hvac.amplifytest1.top'
         },
         {
-            name: 'BioTech',
-            description: 'Revolutionary biotechnology solutions advancing healthcare and life sciences.',
-            image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&h=600&fit=crop'
+            name: 'Digital Spy',
+            image: '/st-images/brands/digitalspy.png',
+            href: 'https://blog-next14temp-3.amplifytest1.top'
+        },
+        {
+            name: 'Towing',
+            image: '/st-images/brands/towing.png',
+            href: 'https://www.towing.com'
+        },
+        {
+            name: 'Chronicle',
+            image: '/st-images/brands/chronicle.png',
+            href: 'https://chronicle.amplifytest1.top'
+        },
+        {
+            name: 'Gamer',
+            image: '/st-images/brands/gammer.png',
+            href: 'https://katen.amplifytest1.top'
+        },
+        {
+            name: 'Linx',
+            image: '/st-images/brands/linxamplify.png',
+            href: 'https://linx.amplifytest1.top'
+        },
+        {
+            name: 'App Recipe Picks',
+            image: '/st-images/brands/apprecipepicks.png',
+            href: 'https://app.recipepicks.com/'
+        },
+        {
+            name: 'Recipe Picks',
+            image: '/st-images/brands/recipepicks.png',
+            href: 'https://https://www.recipepicks.com/'
+        },
+        {
+            name: 'Site Builderz',
+            image: '/st-images/brands/sitebuilderz.png',
+            href: 'https://www.sitebuilderz.com'
         },
     ]
 
-    const brandsSlider2 = [
-        {
-            name: 'GreenEnergy',
-            description: 'Sustainable renewable energy solutions for a cleaner, greener future.',
-            image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&h=600&fit=crop'
-        },
-        {
-            name: 'FinTech Pro',
-            description: 'Innovative financial technology solutions revolutionizing digital banking and payments.',
-            image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop'
-        },
-        {
-            name: 'AI Solutions',
-            description: 'Artificial intelligence and machine learning platforms for intelligent automation.',
-            image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop'
-        },
-        {
-            name: 'MobileFirst',
-            description: 'Mobile-first development company creating exceptional user experiences across devices.',
-            image: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=600&fit=crop'
-        },
-        {
-            name: 'HealthTech',
-            description: 'Digital health solutions improving patient care and medical outcomes worldwide.',
-            image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&h=600&fit=crop'
-        },
-        {
-            name: 'EduTech',
-            description: 'Educational technology platforms transforming learning experiences for students globally.',
-            image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop'
-        },
-        {
-            name: 'LogiChain',
-            description: 'Supply chain optimization and logistics management for efficient business operations.',
-            image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=600&fit=crop'
-        },
-        {
-            name: 'RetailTech',
-            description: 'Next-generation retail technology solutions for modern shopping experiences.',
-            image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop'
-        },
-        {
-            name: 'AutoDrive',
-            description: 'Autonomous vehicle technology and smart transportation solutions for the future.',
-            image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop'
-        },
-    ]
     const sliderRef = useRef(null);
     const lastScrollY = useRef(0);
     const scrollInterval = useRef(null);
-    const sliderRef2 = useRef(null);
-    const lastScrollY2 = useRef(0);
-    const scrollInterval2 = useRef(null);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -155,105 +141,34 @@ export default function Brands() {
         };
     }, []);
 
-
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const currentScrollY = window.scrollY;
-            const direction = currentScrollY > lastScrollY2.current ? 'down' : 'up';
-            lastScrollY2.current = currentScrollY;
-
-            if (sliderRef2.current) {
-                // Clear any previous interval
-                if (scrollInterval2.current) {
-                    clearInterval(scrollInterval2.current);
-                }
-                // Scroll direction: opposite to first slider
-                const scrollAmount = 5; // px per interval
-                scrollInterval2.current = setInterval(() => {
-                    if (direction === 'down') {
-                        sliderRef2.current.scrollLeft -= scrollAmount; // Move left when scrolling down
-                    } else {
-                        sliderRef2.current.scrollLeft += scrollAmount; // Move right when scrolling up
-                    }
-                }, 10);
-            }
-        };
-
-        const handleScrollStop = () => {
-            if (scrollInterval2.current) {
-                clearInterval(scrollInterval2.current);
-            }
-        };
-
-        let scrollTimeout;
-        const onScroll = () => {
-            handleScroll();
-            if (scrollTimeout) clearTimeout(scrollTimeout);
-            scrollTimeout = setTimeout(() => {
-                handleScrollStop();
-            }, 100);
-        };
-
-        window.addEventListener('scroll', onScroll);
-        return () => {
-            window.removeEventListener('scroll', onScroll);
-            if (scrollInterval2.current) {
-                clearInterval(scrollInterval2.current);
-            }
-        };
-    }, []);
-
     return (
-        <FullContainer className='py-12 bg-white'>
+        <FullContainer className='py-12 lg:py-28 bg-white'>
             <Container>
                 <div className="text-start mb-16">
-                   <Heading title="Our Brands" className="text-primary mb-6" />
+                    <Heading title="Our Brands" className="text-primary mb-6" />
                     <p className='text-lg max-w-2xl text-start text-secondary/80 '>
                         We are a team of developers and designers who are passionate about creating digital products that are both functional and aesthetically pleasing.
                     </p>
                 </div>
 
-                <div className='relative mb-12'>
-                    <div ref={sliderRef} className='flex gap-4 overflow-x-auto scrollbar-hide p-8' style={{
+                <div className='relative'>
+                    <div ref={sliderRef} className='flex gap-4 lg:gap-6 overflow-x-auto scrollbar-hide p-8' style={{
                         scrollbarWidth: 'none',        // Firefox
                         msOverflowStyle: 'none',       // IE and Edge
                     }}>
                         {
                             brandsSlider1.map((brand, index) => (
-                                <div key={index} className='flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 flex flex-col items-center group justify-center border min-h-36 lg:min-h-48 xl:min-h-64 border-primary/20 rounded-lg overflow-hidden p-4 relative bg-white shadow-lg hover:shadow-xl transition-all duration-300'>
-                                    <Image src={brand.image} alt={brand.name} width={1000} height={1000} className='w-full h-full object-cover absolute top-0 left-0 group-hover:scale-110 transition-all duration-700' />
-                                    <div className='absolute top-0 left-0 w-full h-full bg-secondary/80 z-10' />
-                                    <div className='relative z-10 text-white h-full w-full flex items-center justify-center transition-all duration-700'>
-                                        <h2 className='text-2xl lg:text-3xl font-bold group-hover:hidden text-center'>{brand.name}</h2>
-                                        <p className='text-lg hidden group-hover:block text-center text-white'>{brand.description}</p>
+                                <Link href={brand.href} target='_blank' key={index} className='flex-shrink-0 w-full group  sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-[31%] flex flex-col items-center group justify-center min-h-36 lg:min-h-48 xl:min-h-64   rounded-lg overflow-hidden px-2 py-2 relative bg-white shadow-lg hover:shadow-xl transition-all duration-300'>
+                                    <Image src={brand.image} alt={brand.name} width={1000} height={1000} className='w-full h-full rounded-sm transition-all duration-700' />
+                                    <div className='absolute top-0 left-0 w-full h-full group-hover:bg-secondary/60 z-10' />
+                                    <div className='absolute bottom-0 left-0 z-10 text-white h-full w-full flex items-center justify-center transition-all duration-700'>
+                                        <h2 className='text-2xl lg:text-3xl font-bold text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>{brand.name}</h2>
                                     </div>
-                                </div>
-                            ))
-                        }
-                    </div>
-
-                </div>
-                <div className='relative '>
-                    <div ref={sliderRef2} className='flex gap-4 overflow-x-auto scrollbar-hide pb-4 z-10' style={{
-                        scrollbarWidth: 'none',        // Firefox
-                        msOverflowStyle: 'none',       // IE and Edge
-                    }}>
-                        {
-                            brandsSlider2.map((brand, index) => (
-                                <div key={index} className='flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 flex flex-col items-center group justify-center border min-h-36 lg:min-h-48 xl:min-h-64 border-primary/20 rounded-lg overflow-hidden p-4 relative bg-white shadow-lg hover:shadow-xl transition-all duration-300'>
-                                    <Image src={brand.image} alt={brand.name} width={1000} height={1000} className='w-full h-full object-cover absolute top-0 left-0 group-hover:scale-110 transition-all duration-700' />
-                                    <div className='absolute top-0 left-0 w-full h-full bg-secondary/80 z-10' />
-                                    <div className='relative z-10 text-white h-full w-full flex items-center justify-center transition-all duration-700'>
-                                        <h2 className='text-2xl lg:text-3xl font-bold group-hover:hidden text-center'>{brand.name}</h2>
-                                        <p className='text-lg hidden group-hover:block text-center text-white'>{brand.description}</p>
-                                    </div>
-                                </div>
+                                </Link>
                             ))
                         }
                     </div>
                 </div>
-
             </Container>
         </FullContainer>
     )
