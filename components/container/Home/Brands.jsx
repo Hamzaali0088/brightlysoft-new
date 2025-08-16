@@ -159,8 +159,8 @@ export default function Brands() {
                         {
                             brandsSlider1.map((brand, index) => (
                                 <Link href={brand.href} target='_blank' key={index} className='flex-shrink-0 w-full group  sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-[31%] flex flex-col items-center group justify-center min-h-36 lg:min-h-48 xl:min-h-64   rounded-lg overflow-hidden px-2 py-2 relative bg-white shadow-lg hover:shadow-xl transition-all duration-300'>
-                                    <Image src={brand.image} alt={brand.name} width={1000} height={1000} className='w-full h-full rounded-sm transition-all duration-700' />
-                                    <div className='absolute top-0 left-0 w-full h-full group-hover:bg-secondary/60 z-10' />
+                                    <Image src={brand.image} alt={brand.name} width={1000} height={1000} className='w-full h-full rounded-sm transition-all duration-700 aspect-3/2' />
+                                    <div className='absolute top-0 left-0 w-full aspect-3/2 h-full group-hover:bg-secondary/60 z-10' />
                                     <div className='absolute bottom-0 left-0 z-10 text-white h-full w-full flex items-center justify-center transition-all duration-700'>
                                         <h2 className='text-2xl lg:text-3xl font-bold text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>{brand.name}</h2>
                                     </div>
