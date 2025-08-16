@@ -41,7 +41,7 @@ const Video = ({id}) => {
     }, [])
 
     return (
-        <div id={id} className={`video-container mt-12 md:mt-14 lg:mt-16 transition-all duration-500 ease-in-out flex items-center justify-center mx-auto h-[150vh] relative overflow-hidden ${
+        <div id={id} className={`video-container mt-12 md:mt-14 lg:mt-16 transition-all duration-500 ease-in-out flex items-center justify-center mx-auto h-[105vh] relative overflow-hidden ${
             isAtTop ? 'w-full' : 'w-[80%]'
         }`}>
             <video 
@@ -51,6 +51,15 @@ const Video = ({id}) => {
                 loop 
                 className='h-full w-full object-cover' 
             />
+            <div className='absolute top-0 left-0 w-full h-full bg-secondary/40 z-10 ' />
+            <div className='absolute bottom-0 flex flex-col items-center justify-center left-0 w-full h-full bg-secondary/0 z-10 '>
+                <h3 className='text-white text-5xl lg:text-7xl font-bold text-center max-w-[800px]'>
+                Shining a Light on the Web’s Best.
+                </h3>
+                <p className='text-white text-base lg:text-lg text-center max-w-[700px] mx-auto mt-4'>
+                Brightly Soft curates and showcases the most innovative, beautifully crafted websites—empowering brands to stand out with brilliance and style
+                </p>
+            </div>
         </div>
     )
 }

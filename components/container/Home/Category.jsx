@@ -9,12 +9,12 @@ const Category = () => {
     {
       id: 'towing',
       name: 'Towing',
-      count: 24
+      count: 6
     },
     {
       id: 'gatedoor_repair',
       name: 'Gatedoor repair',
-      count: 8
+      count: 5
     },
     {
       id: 'carpet_cleaning',
@@ -37,7 +37,7 @@ const Category = () => {
 
   const allBrands = [
     // Towing Brands (24)
-    ...Array.from({ length: 24 }, (_, i) => ({
+    ...Array.from({ length: 6 }, (_, i) => ({
       id: i + 1,
       name: `Towing Project ${i + 1}`,
       description: 'Professional towing services for all vehicle types.',
@@ -45,7 +45,7 @@ const Category = () => {
       image: 'https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?w=400&h=300&fit=crop&crop=center'
     })),
     // Gatedoor Repair Brands (8)
-    ...Array.from({ length: 8 }, (_, i) => ({
+    ...Array.from({ length: 5 }, (_, i) => ({
       id: 100 + i + 1,
       name: `Gatedoor Repair Project ${i + 1}`,
       description: 'Expert repair and maintenance for all types of gates and doors.',
@@ -151,35 +151,7 @@ const Category = () => {
           </div>
         </div>
 
-        {/* Category Overview Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {categories.slice(1).map((category) => (
-            <div
-              key={category.id}
-              className="group bg-white border-2 border-secondary/10 rounded-xl p-6 hover:border-primary/30 transition-all duration-300 hover:shadow-lg"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-2xl font-bold text-secondary group-hover:text-primary transition-colors duration-300">
-                  {category.name}
-                </h3>
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary transition-all duration-300">
-                  <span className="text-primary font-bold text-lg group-hover:text-white transition-colors duration-300">
-                    {category.count}
-                  </span>
-                </div>
-              </div>
-              <p className="text-secondary/70 leading-relaxed">
-                Discover our {category.name.toLowerCase()} brands that deliver exceptional value and innovative solutions in their respective domains.
-              </p>
-              <div className="mt-4 flex items-center text-primary font-medium group-hover:translate-x-2 transition-transform duration-300">
-                <span>Explore {category.name}</span>
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </div>
-            </div>
-          ))}
-        </div>
+
       </Container>
     </FullContainer>
   )
